@@ -9,6 +9,16 @@ public class UtenteLoginResponseDto {
    private Date ttl;
    
    private Date tokenCreationTime;
+   
+   private int ruolo;
+
+public int getRuolo() {
+	return ruolo;
+}
+
+public void setRuolo(int ruolo) {
+	this.ruolo = ruolo;
+}
 
 public String getToken() {
 	return token;

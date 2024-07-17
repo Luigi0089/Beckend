@@ -143,13 +143,16 @@ public class UtenteServiceImpl implements UtenteService {
 			map.put("email", "InformazioniUtentee.getEmail");
 			
 			
-			
+			UtenteLoginResponseDto token=new UtenteLoginResponseDto();
 			List<String> ruoli=new ArrayList<>();
 			List<Ruolo> forech=InformazioniUtente.getRuoli();
 			for(Ruolo ruolo : forech ) {
 				
 			
 				ruoli.add(ruolo.getTipologia().name());
+				if(ruolo.getTipologia().name()=="Admin") {
+					token.setRuolo(1);
+				}
 			}
 			  
 			
@@ -164,7 +167,7 @@ public class UtenteServiceImpl implements UtenteService {
 					.signWith(key)
 					.compact();
 			
-			UtenteLoginResponseDto token=new UtenteLoginResponseDto();
+			
 			token.setToken(tokenJwts);
 			token.setTokenCreationTime(creation);
 			token.setTtl(end);

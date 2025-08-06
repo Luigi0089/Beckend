@@ -30,7 +30,7 @@ L'applicazione espone API REST per la gestione di corsi, utenti e iscrizioni, ed
 
 1. **Clona il repository**:
    ```bash
-   git clone <URL_REPO_BACKEND>
+   git clone https://github.com/Luigi0089/Gestionale-Corsi-BE.git
    cd nome-cartella-backend
    ```
 

@@ -1,72 +1,96 @@
-# Test Finale Backend – Sistemi Informativi S.p.A.
+# Gestionale Corsi – Backend  
+*Academy Sistemi Informativi S.p.A.*
 
-Questo progetto rappresenta il **backend sviluppato come test finale** dell’Academy organizzata da **Sistemi Informativi S.p.A.**  
-Il backend espone API REST che consentono la gestione degli utenti, delle località e delle previsioni meteo, integrandosi con servizi esterni.
-
----
-
-## 🧩 Funzionalità principali
-
-- Registrazione di nuovi utenti
-- Login e gestione base delle sessioni
-- Ricerca di località
-- Salvataggio delle località preferite per ciascun utente
-- Recupero delle previsioni meteo tramite API esterne
+Questo progetto rappresenta il **backend del gestionale corsi** sviluppato durante il test finale dell’**Academy di Sistemi Informativi S.p.A.**  
+L'applicazione espone API REST per la gestione di corsi, utenti e iscrizioni, ed è progettata per integrarsi con un frontend Angular.
 
 ---
 
-## ⚙️ Tecnologie utilizzate
+## 🚀 Funzionalità principali
+
+- Creazione, modifica e cancellazione di corsi formativi
+- Registrazione e gestione degli utenti
+- Iscrizione degli utenti ai corsi
+- Espone API REST per l’interazione con il frontend
+
+---
+
+## 🛠️ Tecnologie utilizzate
 
 - Java 17+
 - Spring Boot
 - Spring Web
 - Spring Data JPA
-- H2 / PostgreSQL / MySQL 
-- API esterne per meteo 
+- Database relazionale (es. PostgreSQL o H2)
+- Maven / Gradle
 
 ---
 
 ## ▶️ Avvio del progetto
 
-**Clona il repository**
+1. **Clona il repository**:
    ```bash
-   git clone https://github.com/Luigi0089/Beckend.git
-   cd backend
-```
-  
-### ⚙️ Configura il file `application.properties` o `application.yml`
-Inserire:
+   git clone <URL_REPO_BACKEND>
+   cd nome-cartella-backend
+   ```
 
-- URL e credenziali del database
+2. **Configura il file `application.properties` o `application.yml`** con:
+   - URL e credenziali del database
+   - eventuali parametri per CORS se serve comunicare col frontend
 
+3. **Avvia l’applicazione**:
 
-## 🌐 Accedi al backend
-L’app sarà raggiungibile su:
+   Con Maven:
    ```bash
+   ./mvnw spring-boot:run
+   ```
+
+   Oppure con Gradle:
+   ```bash
+   ./gradlew bootRun
+   ```
+
+---
+
+### 🌐 Accesso al backend
+
+L’app sarà disponibile su:
+
+```bash
 http://localhost:8080/
 ```
 
-## 📘 API disponibili
-Le API sono esposte in formato REST.
+---
 
-## 🔗 Collegamento con il frontend
+### 📘 API disponibili
+
+Le API sono esposte in formato REST. Se Swagger è abilitato, la documentazione sarà visibile su:
+
+```bash
+http://localhost:8080/swagger-ui.html
+```
+
+---
+
+### 🔗 Collegamento con il frontend
+
 Il frontend Angular comunica con questo backend per:
 
 - Effettuare login e registrazione
-- Cercare e salvare località preferite
-- Ottenere i dati meteo
+- Visualizzare i corsi disponibili
+- Iscriversi ai corsi
 
-> Assicurarsi che il backend sia in esecuzione e accessibile dal frontend (con configurazione CORS se necessaria).
+> Assicurati che il backend sia attivo e accessibile dal frontend (configura CORS se necessario).
 
+---
 
 ### 👤 Autore
 
 Realizzato da **Luigi Vasile**  
 Nell’ambito del test finale dell’Academy di **Sistemi Informativi S.p.A.**
 
+---
 
+### 📄 Licenza
 
-
-
-
-
+Uso accademico / dimostrativo – Nessuna licenza commerciale.
